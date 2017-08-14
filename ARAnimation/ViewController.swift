@@ -14,7 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     var animations = [String: CAAnimation]()
-    var idle:Bool = true;
+    var idle:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene = scene
         
         // Load the DAE animations
-        loadAnimations();
+        loadAnimations()
     }
     
     func loadAnimations () {
@@ -60,8 +60,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     
     func loadAnimation(withKey: String, sceneName:String, animationIdentifier:String) {
-        let sceneURL = Bundle.main.url(forResource: sceneName, withExtension: "dae");
-        let sceneSource = SCNSceneSource(url: sceneURL!, options: nil);
+        let sceneURL = Bundle.main.url(forResource: sceneName, withExtension: "dae")
+        let sceneSource = SCNSceneSource(url: sceneURL!, options: nil)
         let animationObject = sceneSource?.entryWithIdentifier(animationIdentifier, withClass: CAAnimation.self)
         
         // The animation will only play once
@@ -85,9 +85,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         if hitResults.first != nil {
             if(idle) {
-                playAnimation(key: "dancing");
+                playAnimation(key: "dancing")
             } else {
-                stopAnimation(key: "dancing");
+                stopAnimation(key: "dancing")
             }
             idle = !idle
             return
@@ -96,7 +96,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func playAnimation(key: String) {
         // Add the animation to start playing it right away
-        sceneView.scene.rootNode.addAnimation(animations[key]!, forKey: key);
+        sceneView.scene.rootNode.addAnimation(animations[key]!, forKey: key)
     }
     
     func stopAnimation(key: String) {
