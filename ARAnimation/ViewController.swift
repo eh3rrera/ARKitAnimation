@@ -62,16 +62,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func loadAnimation(withKey: String, sceneName:String, animationIdentifier:String) {
         let sceneURL = Bundle.main.url(forResource: sceneName, withExtension: "dae")
         let sceneSource = SCNSceneSource(url: sceneURL!, options: nil)
-        let animationObject = sceneSource?.entryWithIdentifier(animationIdentifier, withClass: CAAnimation.self)
         
-        // The animation will only play once
-        animationObject!.repeatCount = 1
-        // To create smooth transitions between animations
-        animationObject!.fadeInDuration = CGFloat(1)
-        animationObject!.fadeOutDuration = CGFloat(0.5)
-        
-        // Store the animation for later use
-        animations[withKey] = animationObject!
+        if let animationObject = sceneSource?.entryWithIdentifier(animationIdentifier, withClass: CAAnimation.self) {
+            // The animation will only play once
+            animationObject.repeatCount = 1
+            // To create smooth transitions between animations
+            animationObject.fadeInDuration = CGFloat(1)
+            animationObject.fadeOutDuration = CGFloat(0.5)
+            
+            // Store the animation for later use
+            animations[withKey] = animationObject
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
