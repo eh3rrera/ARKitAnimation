@@ -6,7 +6,7 @@ Simple animation of a 3D model made with Mixamo and presented in an AR scene wit
 
 # Requirements
 
-- Xcode 9 (Beta 2 at least)
+- Xcode 9 (Beta 5 at least)
 - iOS 11
 - An iOS device with an A9 or better processor (iPhone 6s or superior, iPad Pro, iPad 2017)
 
