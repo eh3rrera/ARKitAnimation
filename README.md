@@ -1,12 +1,12 @@
 # ARKitAnimation
-Simple animation of a 3D model made with Mixamo and presented in an AR scene with ARKit. Follow the tutorial at the Pusher blog (not yet published).
+Simple animation of a 3D model made with Mixamo and presented in an AR scene with ARKit. Follow the [tutorial at Pusher's blog](https://blog.pusher.com/animating-3d-model-ar-arkit-mixamo/).
 
 [![Animating a 3D model with ARKit and Mixamo](https://img.youtube.com/vi/MLBQWCgRepk/0.jpg)](http://www.youtube.com/watch?v=MLBQWCgRepk)
 
 
 # Requirements
 
-- Xcode 9 (Beta 5 at least)
+- Xcode 9
 - iOS 11
 - An iOS device with an A9 or better processor (iPhone 6s or superior, iPad Pro, iPad 2017)
 
